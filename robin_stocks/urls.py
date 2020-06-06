@@ -69,7 +69,7 @@ def popularity(symbol):
 
 
 def most_popular():
-    return('https://api.robinhood.com/midlands/lists/items/'
+    return('https://api.robinhood.com/midlands/lists/items/')
 
 
 def quotes():
