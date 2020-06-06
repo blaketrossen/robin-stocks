@@ -274,7 +274,10 @@ def get_most_popular(info=None):
     that matches the info parameter. Otherwise, the whole dictionary is returned.
     """
     url = urls.most_popular()
-    data = helper.request_get(url)
+    payload = {
+        'list_id': helper.get_list_id('most_popular')
+    }
+    data = helper.request_get(url, 'results', payload)
 
     return(helper.filter(data, info))
 

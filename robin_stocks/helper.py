@@ -225,6 +225,13 @@ def inputs_to_set(inputSymbols):
     return(symbols_list)
 
 
+def get_list_id(list):
+    list_mapping = {
+        'most_popular': 'e8ef4c1f-244f-4db5-a582-c4c37f3c8e8e',
+    }
+    return list_mapping[list]
+
+
 def request_document(url, payload=None):
     """Using a document url, makes a get request and returnes the session data.
 
