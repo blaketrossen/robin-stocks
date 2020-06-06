@@ -247,6 +247,18 @@ def get_popularity(symbol, info=None):
 
     return(helper.filter(data, info))
 
+@helper.login_required
+def get_most_popular(info=None):
+    """Returns the top 100 most popular stocks on Robinhood.
+    :type info: Optional[str]
+    :returns: If the info parameter is provided, then the function will extract the value of the key \
+    that matches the info parameter. Otherwise, the whole dictionary is returned.
+    """
+    url = urls.most_popular()
+    data = helper.request_get(url)
+
+    return(helper.filter(data, info))
+
 
 def get_events(symbol, info=None):
     """Returns the events related to a stock.
