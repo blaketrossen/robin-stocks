@@ -128,6 +128,7 @@ from .stocks import get_quotes,                 \
                     get_symbol_by_url,          \
                     get_ratings,                \
                     get_popularity,             \
+                    get_most_popular,           \
                     get_events,                 \
                     get_earnings,               \
                     get_news,                   \
