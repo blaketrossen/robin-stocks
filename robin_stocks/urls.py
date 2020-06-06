@@ -69,8 +69,10 @@ def popularity(symbol):
 
 
 def most_popular():
-    return("https://api.robinhood.com/midlands/lists/e8ef4c1f-244f-4db5-a582-c4c37f3c8e8e/?owner_type=robinhood")
-    
+    list_id = 'e8ef4c1f-244f-4db5-a582-c4c37f3c8e8e'
+    return('https://api.robinhood.com/midlands/lists/items/?list_id={}'.format(list_id))
+    # return("https://api.robinhood.com/midlands/lists/e8ef4c1f-244f-4db5-a582-c4c37f3c8e8e/?owner_type=robinhood")
+
 
 def quotes():
     return('https://api.robinhood.com/quotes/')
