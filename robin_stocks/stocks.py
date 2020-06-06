@@ -190,6 +190,23 @@ def get_symbol_by_url(url):
     data = helper.request_get(url)
     return helper.filter(data, info='symbol')
 
+
+@helper.convert_none_to_string
+def get_symbol_by_id(id):
+    """Returns the symbol of a stock from the robinhood instrument id. Should be
+    located at ``https://api.robinhood.com/instruments/<id>`` where <id> is the
+    id of the stock.
+
+    :param id: The id of the stock as a string.
+    :type id: str
+    :returns: Returns the ticker symbol of the stock.
+
+    """
+    url = "https://api.robinhood.com/instruments/{}".format(id)
+    data = helper.request_get(url)
+    return helper.filter(data, info='symbol')
+
+
 @helper.convert_none_to_string
 def get_ratings(symbol, info=None):
     """Returns the ratings for a stock, including the number of buy, hold, and sell ratings.
@@ -224,6 +241,7 @@ def get_ratings(symbol, info=None):
 
     return(helper.filter(data, info))
 
+
 @helper.convert_none_to_string
 def get_popularity(symbol, info=None):
     """Returns the number of open positions.
@@ -246,6 +264,7 @@ def get_popularity(symbol, info=None):
     data = helper.request_get(url)
 
     return(helper.filter(data, info))
+
 
 @helper.login_required
 def get_most_popular(info=None):

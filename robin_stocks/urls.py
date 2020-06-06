@@ -67,8 +67,10 @@ def news(symbol):
 def popularity(symbol):
     return('https://api.robinhood.com/instruments/{0}/popularity/'.format(id_for_stock(symbol)))
 
+
 def most_popular():
     return("https://api.robinhood.com/midlands/lists/e8ef4c1f-244f-4db5-a582-c4c37f3c8e8e/?owner_type=robinhood")
+    
 
 def quotes():
     return('https://api.robinhood.com/quotes/')
