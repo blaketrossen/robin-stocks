@@ -126,6 +126,7 @@ from .stocks import get_quotes,                 \
                     get_name_by_symbol,         \
                     get_name_by_url,            \
                     get_symbol_by_url,          \
+                    get_symbol_by_id,           \
                     get_ratings,                \
                     get_popularity,             \
                     get_most_popular,           \
